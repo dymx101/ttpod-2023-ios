@@ -11,6 +11,11 @@
 		F1FF40332ABAD95600E0840D /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1FF40322ABAD95600E0840D /* ContentView.swift */; };
 		F1FF40352ABAD95900E0840D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F1FF40342ABAD95900E0840D /* Assets.xcassets */; };
 		F1FF40382ABAD95900E0840D /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F1FF40372ABAD95900E0840D /* Preview Assets.xcassets */; };
+		F1FF40402AC8138200E0840D /* TabBarItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1FF403F2AC8138200E0840D /* TabBarItem.swift */; };
+		F1FF40422AC813B500E0840D /* CustomTabBarContainerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1FF40412AC813B500E0840D /* CustomTabBarContainerView.swift */; };
+		F1FF40442AC813E000E0840D /* CustomTabBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1FF40432AC813E000E0840D /* CustomTabBarView.swift */; };
+		F1FF40462AC813FD00E0840D /* TabBarItemsPreferenceKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1FF40452AC813FD00E0840D /* TabBarItemsPreferenceKey.swift */; };
+		F1FF40482AC8142100E0840D /* AppTabBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1FF40472AC8142100E0840D /* AppTabBarView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +24,11 @@
 		F1FF40322ABAD95600E0840D /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		F1FF40342ABAD95900E0840D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F1FF40372ABAD95900E0840D /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		F1FF403F2AC8138200E0840D /* TabBarItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarItem.swift; sourceTree = "<group>"; };
+		F1FF40412AC813B500E0840D /* CustomTabBarContainerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTabBarContainerView.swift; sourceTree = "<group>"; };
+		F1FF40432AC813E000E0840D /* CustomTabBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTabBarView.swift; sourceTree = "<group>"; };
+		F1FF40452AC813FD00E0840D /* TabBarItemsPreferenceKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarItemsPreferenceKey.swift; sourceTree = "<group>"; };
+		F1FF40472AC8142100E0840D /* AppTabBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppTabBarView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,6 +61,7 @@
 		F1FF402F2ABAD95600E0840D /* TTPodMusicApp */ = {
 			isa = PBXGroup;
 			children = (
+				F1FF403E2AC8136900E0840D /* TabBar */,
 				F1FF40302ABAD95600E0840D /* TTPodMusicAppApp.swift */,
 				F1FF40322ABAD95600E0840D /* ContentView.swift */,
 				F1FF40342ABAD95900E0840D /* Assets.xcassets */,
@@ -65,6 +76,18 @@
 				F1FF40372ABAD95900E0840D /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		F1FF403E2AC8136900E0840D /* TabBar */ = {
+			isa = PBXGroup;
+			children = (
+				F1FF403F2AC8138200E0840D /* TabBarItem.swift */,
+				F1FF40452AC813FD00E0840D /* TabBarItemsPreferenceKey.swift */,
+				F1FF40412AC813B500E0840D /* CustomTabBarContainerView.swift */,
+				F1FF40432AC813E000E0840D /* CustomTabBarView.swift */,
+				F1FF40472AC8142100E0840D /* AppTabBarView.swift */,
+			);
+			path = TabBar;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -137,8 +160,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F1FF40482AC8142100E0840D /* AppTabBarView.swift in Sources */,
+				F1FF40402AC8138200E0840D /* TabBarItem.swift in Sources */,
+				F1FF40442AC813E000E0840D /* CustomTabBarView.swift in Sources */,
 				F1FF40332ABAD95600E0840D /* ContentView.swift in Sources */,
+				F1FF40462AC813FD00E0840D /* TabBarItemsPreferenceKey.swift in Sources */,
 				F1FF40312ABAD95600E0840D /* TTPodMusicAppApp.swift in Sources */,
+				F1FF40422AC813B500E0840D /* CustomTabBarContainerView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
