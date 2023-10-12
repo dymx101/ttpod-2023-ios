@@ -15,7 +15,7 @@ struct AppTabBarView: View {
   // MARK: -  内容
   var body: some View {
     CustomTabBarContainerView(selection: $tabSelection) {
-      Color.blue
+      TTPodSettingsView()
         .tabBarItem(tab: .home, selection: $tabSelection)
       
       Color.red
