@@ -7,8 +7,6 @@
 
 import SwiftUI
 
-import SwiftUI
-
 struct TTPodSettingsView: View {
     
     var body: some View {
@@ -62,8 +60,4 @@ struct TTPodSettingsView: View {
             }
         }
     }
-}
-
-#Preview {
-    TTPodSettingsView()
 }
