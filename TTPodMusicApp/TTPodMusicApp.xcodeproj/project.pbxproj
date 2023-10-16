@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		CEC77FCB2AD722AD00DB4731 /* TTPodSettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEC77FCA2AD722AD00DB4731 /* TTPodSettingsView.swift */; };
+		CEC780082ADD01D400DB4731 /* NavigationBarModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEC780072ADD01D400DB4731 /* NavigationBarModifier.swift */; };
 		F1FF40312ABAD95600E0840D /* TTPodMusicAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1FF40302ABAD95600E0840D /* TTPodMusicAppApp.swift */; };
 		F1FF40332ABAD95600E0840D /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1FF40322ABAD95600E0840D /* ContentView.swift */; };
 		F1FF40352ABAD95900E0840D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F1FF40342ABAD95900E0840D /* Assets.xcassets */; };
@@ -21,6 +22,7 @@
 
 /* Begin PBXFileReference section */
 		CEC77FCA2AD722AD00DB4731 /* TTPodSettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TTPodSettingsView.swift; sourceTree = "<group>"; };
+		CEC780072ADD01D400DB4731 /* NavigationBarModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationBarModifier.swift; sourceTree = "<group>"; };
 		F1FF402D2ABAD95600E0840D /* TTPodMusicApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TTPodMusicApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F1FF40302ABAD95600E0840D /* TTPodMusicAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TTPodMusicAppApp.swift; sourceTree = "<group>"; };
 		F1FF40322ABAD95600E0840D /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -52,6 +54,14 @@
 			path = Views;
 			sourceTree = "<group>";
 		};
+		CEC780062ADD017500DB4731 /* ViewModifiers */ = {
+			isa = PBXGroup;
+			children = (
+				CEC780072ADD01D400DB4731 /* NavigationBarModifier.swift */,
+			);
+			path = ViewModifiers;
+			sourceTree = "<group>";
+		};
 		F1FF40242ABAD95600E0840D = {
 			isa = PBXGroup;
 			children = (
@@ -71,6 +81,7 @@
 		F1FF402F2ABAD95600E0840D /* TTPodMusicApp */ = {
 			isa = PBXGroup;
 			children = (
+				CEC780062ADD017500DB4731 /* ViewModifiers */,
 				CEC77FC92AD7223E00DB4731 /* Views */,
 				F1FF403E2AC8136900E0840D /* TabBar */,
 				F1FF40302ABAD95600E0840D /* TTPodMusicAppApp.swift */,
@@ -173,6 +184,7 @@
 			files = (
 				F1FF40482AC8142100E0840D /* AppTabBarView.swift in Sources */,
 				CEC77FCB2AD722AD00DB4731 /* TTPodSettingsView.swift in Sources */,
+				CEC780082ADD01D400DB4731 /* NavigationBarModifier.swift in Sources */,
 				F1FF40402AC8138200E0840D /* TabBarItem.swift in Sources */,
 				F1FF40442AC813E000E0840D /* CustomTabBarView.swift in Sources */,
 				F1FF40332ABAD95600E0840D /* ContentView.swift in Sources */,
