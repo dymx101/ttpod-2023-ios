@@ -8,6 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		CEC77FCB2AD722AD00DB4731 /* TTPodSettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEC77FCA2AD722AD00DB4731 /* TTPodSettingsView.swift */; };
+		F15DC9A82AE3F29700718846 /* SoundCloudApiConstant.swift in Sources */ = {isa = PBXBuildFile; fileRef = F15DC9A72AE3F29700718846 /* SoundCloudApiConstant.swift */; };
+		F15DC9AA2AE3F45600718846 /* SoundCloudApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = F15DC9A92AE3F45600718846 /* SoundCloudApi.swift */; };
+		F15DC9AC2AE3F4F700718846 /* SoundCloudTrack.swift in Sources */ = {isa = PBXBuildFile; fileRef = F15DC9AB2AE3F4F700718846 /* SoundCloudTrack.swift */; };
+		F15DC9AE2AE3F5A900718846 /* SoundCloudUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = F15DC9AD2AE3F5A900718846 /* SoundCloudUser.swift */; };
+		F15DC9B62AE3FF9400718846 /* SoundCloudApiTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F15DC9B52AE3FF9400718846 /* SoundCloudApiTests.swift */; };
 		F1FF40312ABAD95600E0840D /* TTPodMusicAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1FF40302ABAD95600E0840D /* TTPodMusicAppApp.swift */; };
 		F1FF40332ABAD95600E0840D /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1FF40322ABAD95600E0840D /* ContentView.swift */; };
 		F1FF40352ABAD95900E0840D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F1FF40342ABAD95900E0840D /* Assets.xcassets */; };
@@ -19,8 +24,24 @@
 		F1FF40482AC8142100E0840D /* AppTabBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1FF40472AC8142100E0840D /* AppTabBarView.swift */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		F15DC9B72AE3FF9400718846 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F1FF40252ABAD95600E0840D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F1FF402C2ABAD95600E0840D;
+			remoteInfo = TTPodMusicApp;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
 		CEC77FCA2AD722AD00DB4731 /* TTPodSettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TTPodSettingsView.swift; sourceTree = "<group>"; };
+		F15DC9A72AE3F29700718846 /* SoundCloudApiConstant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoundCloudApiConstant.swift; sourceTree = "<group>"; };
+		F15DC9A92AE3F45600718846 /* SoundCloudApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoundCloudApi.swift; sourceTree = "<group>"; };
+		F15DC9AB2AE3F4F700718846 /* SoundCloudTrack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoundCloudTrack.swift; sourceTree = "<group>"; };
+		F15DC9AD2AE3F5A900718846 /* SoundCloudUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoundCloudUser.swift; sourceTree = "<group>"; };
+		F15DC9B32AE3FF9400718846 /* TTPodMusicAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TTPodMusicAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		F15DC9B52AE3FF9400718846 /* SoundCloudApiTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoundCloudApiTests.swift; sourceTree = "<group>"; };
 		F1FF402D2ABAD95600E0840D /* TTPodMusicApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TTPodMusicApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F1FF40302ABAD95600E0840D /* TTPodMusicAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TTPodMusicAppApp.swift; sourceTree = "<group>"; };
 		F1FF40322ABAD95600E0840D /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -34,6 +55,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		F15DC9B02AE3FF9400718846 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		F1FF402A2ABAD95600E0840D /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -52,10 +80,30 @@
 			path = Views;
 			sourceTree = "<group>";
 		};
+		F15DC9A62AE3F26800718846 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				F15DC9A72AE3F29700718846 /* SoundCloudApiConstant.swift */,
+				F15DC9A92AE3F45600718846 /* SoundCloudApi.swift */,
+				F15DC9AB2AE3F4F700718846 /* SoundCloudTrack.swift */,
+				F15DC9AD2AE3F5A900718846 /* SoundCloudUser.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		F15DC9B42AE3FF9400718846 /* TTPodMusicAppTests */ = {
+			isa = PBXGroup;
+			children = (
+				F15DC9B52AE3FF9400718846 /* SoundCloudApiTests.swift */,
+			);
+			path = TTPodMusicAppTests;
+			sourceTree = "<group>";
+		};
 		F1FF40242ABAD95600E0840D = {
 			isa = PBXGroup;
 			children = (
 				F1FF402F2ABAD95600E0840D /* TTPodMusicApp */,
+				F15DC9B42AE3FF9400718846 /* TTPodMusicAppTests */,
 				F1FF402E2ABAD95600E0840D /* Products */,
 			);
 			sourceTree = "<group>";
@@ -64,6 +112,7 @@
 			isa = PBXGroup;
 			children = (
 				F1FF402D2ABAD95600E0840D /* TTPodMusicApp.app */,
+				F15DC9B32AE3FF9400718846 /* TTPodMusicAppTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -71,6 +120,7 @@
 		F1FF402F2ABAD95600E0840D /* TTPodMusicApp */ = {
 			isa = PBXGroup;
 			children = (
+				F15DC9A62AE3F26800718846 /* Network */,
 				CEC77FC92AD7223E00DB4731 /* Views */,
 				F1FF403E2AC8136900E0840D /* TabBar */,
 				F1FF40302ABAD95600E0840D /* TTPodMusicAppApp.swift */,
@@ -104,6 +154,24 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		F15DC9B22AE3FF9400718846 /* TTPodMusicAppTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F15DC9B92AE3FF9400718846 /* Build configuration list for PBXNativeTarget "TTPodMusicAppTests" */;
+			buildPhases = (
+				F15DC9AF2AE3FF9400718846 /* Sources */,
+				F15DC9B02AE3FF9400718846 /* Frameworks */,
+				F15DC9B12AE3FF9400718846 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F15DC9B82AE3FF9400718846 /* PBXTargetDependency */,
+			);
+			name = TTPodMusicAppTests;
+			productName = TTPodMusicAppTests;
+			productReference = F15DC9B32AE3FF9400718846 /* TTPodMusicAppTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		F1FF402C2ABAD95600E0840D /* TTPodMusicApp */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = F1FF403B2ABAD95900E0840D /* Build configuration list for PBXNativeTarget "TTPodMusicApp" */;
@@ -128,9 +196,13 @@
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
-				LastSwiftUpdateCheck = 1340;
+				LastSwiftUpdateCheck = 1420;
 				LastUpgradeCheck = 1340;
 				TargetAttributes = {
+					F15DC9B22AE3FF9400718846 = {
+						CreatedOnToolsVersion = 14.2;
+						TestTargetID = F1FF402C2ABAD95600E0840D;
+					};
 					F1FF402C2ABAD95600E0840D = {
 						CreatedOnToolsVersion = 13.4.1;
 					};
@@ -150,11 +222,19 @@
 			projectRoot = "";
 			targets = (
 				F1FF402C2ABAD95600E0840D /* TTPodMusicApp */,
+				F15DC9B22AE3FF9400718846 /* TTPodMusicAppTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		F15DC9B12AE3FF9400718846 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		F1FF402B2ABAD95600E0840D /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -167,24 +247,84 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		F15DC9AF2AE3FF9400718846 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F15DC9B62AE3FF9400718846 /* SoundCloudApiTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		F1FF40292ABAD95600E0840D /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				F1FF40482AC8142100E0840D /* AppTabBarView.swift in Sources */,
 				CEC77FCB2AD722AD00DB4731 /* TTPodSettingsView.swift in Sources */,
+				F15DC9A82AE3F29700718846 /* SoundCloudApiConstant.swift in Sources */,
+				F15DC9AC2AE3F4F700718846 /* SoundCloudTrack.swift in Sources */,
 				F1FF40402AC8138200E0840D /* TabBarItem.swift in Sources */,
 				F1FF40442AC813E000E0840D /* CustomTabBarView.swift in Sources */,
+				F15DC9AA2AE3F45600718846 /* SoundCloudApi.swift in Sources */,
 				F1FF40332ABAD95600E0840D /* ContentView.swift in Sources */,
 				F1FF40462AC813FD00E0840D /* TabBarItemsPreferenceKey.swift in Sources */,
 				F1FF40312ABAD95600E0840D /* TTPodMusicAppApp.swift in Sources */,
+				F15DC9AE2AE3F5A900718846 /* SoundCloudUser.swift in Sources */,
 				F1FF40422AC813B500E0840D /* CustomTabBarContainerView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		F15DC9B82AE3FF9400718846 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F1FF402C2ABAD95600E0840D /* TTPodMusicApp */;
+			targetProxy = F15DC9B72AE3FF9400718846 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin XCBuildConfiguration section */
+		F15DC9BA2AE3FF9400718846 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 2H7FH7ZQNH;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.waling.TTPodMusicAppTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TTPodMusicApp.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/TTPodMusicApp";
+			};
+			name = Debug;
+		};
+		F15DC9BB2AE3FF9400718846 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 2H7FH7ZQNH;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.waling.TTPodMusicAppTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TTPodMusicApp.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/TTPodMusicApp";
+			};
+			name = Release;
+		};
 		F1FF40392ABAD95900E0840D /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -362,6 +502,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		F15DC9B92AE3FF9400718846 /* Build configuration list for PBXNativeTarget "TTPodMusicAppTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F15DC9BA2AE3FF9400718846 /* Debug */,
+				F15DC9BB2AE3FF9400718846 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		F1FF40282ABAD95600E0840D /* Build configuration list for PBXProject "TTPodMusicApp" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
