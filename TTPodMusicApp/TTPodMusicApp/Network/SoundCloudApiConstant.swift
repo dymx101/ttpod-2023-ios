@@ -33,7 +33,7 @@ enum SoundCloudApiConstant {
   static func tracksByGenreUrl(genre: String, offset: Int, limit: Int) -> String {
     "\(URL_API)tracks.json?client_id=\(SOUND_CLOUD_CLIENT_ID)&genres=\(genre)&offset=\(offset)&limit=\(limit)"
   }
-  
+
   static func tracksByGenreUrlV2(genre: String, kind: String = KIND_TOP, offset: Int, limit: Int) -> String {
     "\(URL_API_V2)\(METHOD_CHARTS)&kind=\(kind)&client_id=\(SOUND_CLOUD_CLIENT_ID)&genre=soundcloud:genres:\(genre)&offset=\(offset)&limit=\(limit)&linked_partitioning=1"
   }
