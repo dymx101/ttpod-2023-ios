@@ -8,13 +8,9 @@
 import Foundation
 
 struct SoundCloudUser: Decodable {
-  let id: String
+  let id: Int
   let username: String?
-  let avatar: String?
-  
-  private enum CodingKeys: String, CodingKey {
-    case id
-    case username
-    case avatar = "avatar_url"
-  }
+  let avatarUrl: String?
+  let firstName: String?
+  let lastName: String?
 }

@@ -14,6 +14,9 @@
 		F15DC9AE2AE3F5A900718846 /* SoundCloudUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = F15DC9AD2AE3F5A900718846 /* SoundCloudUser.swift */; };
 		F15DC9B62AE3FF9400718846 /* SoundCloudApiTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F15DC9B52AE3FF9400718846 /* SoundCloudApiTests.swift */; };
 		F1E39C872AE4058700CEF0DA /* NavigationBarModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1E39C862AE4058700CEF0DA /* NavigationBarModifier.swift */; };
+		F1E39C8A2AE5028D00CEF0DA /* SoundCloudGenreTracksResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1E39C892AE5028D00CEF0DA /* SoundCloudGenreTracksResponse.swift */; };
+		F1E39C8C2AE504FC00CEF0DA /* SoundCloudApiDecoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1E39C8B2AE504FC00CEF0DA /* SoundCloudApiDecoder.swift */; };
+		F1E39C8E2AE5065900CEF0DA /* SoundCloudTrackCollection.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1E39C8D2AE5065900CEF0DA /* SoundCloudTrackCollection.swift */; };
 		F1FF40312ABAD95600E0840D /* TTPodMusicAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1FF40302ABAD95600E0840D /* TTPodMusicAppApp.swift */; };
 		F1FF40332ABAD95600E0840D /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1FF40322ABAD95600E0840D /* ContentView.swift */; };
 		F1FF40352ABAD95900E0840D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F1FF40342ABAD95900E0840D /* Assets.xcassets */; };
@@ -44,6 +47,9 @@
 		F15DC9B32AE3FF9400718846 /* TTPodMusicAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TTPodMusicAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F15DC9B52AE3FF9400718846 /* SoundCloudApiTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoundCloudApiTests.swift; sourceTree = "<group>"; };
 		F1E39C862AE4058700CEF0DA /* NavigationBarModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationBarModifier.swift; sourceTree = "<group>"; };
+		F1E39C892AE5028D00CEF0DA /* SoundCloudGenreTracksResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoundCloudGenreTracksResponse.swift; sourceTree = "<group>"; };
+		F1E39C8B2AE504FC00CEF0DA /* SoundCloudApiDecoder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoundCloudApiDecoder.swift; sourceTree = "<group>"; };
+		F1E39C8D2AE5065900CEF0DA /* SoundCloudTrackCollection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoundCloudTrackCollection.swift; sourceTree = "<group>"; };
 		F1FF402D2ABAD95600E0840D /* TTPodMusicApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TTPodMusicApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F1FF40302ABAD95600E0840D /* TTPodMusicAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TTPodMusicAppApp.swift; sourceTree = "<group>"; };
 		F1FF40322ABAD95600E0840D /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -86,10 +92,10 @@
 		F15DC9A62AE3F26800718846 /* Network */ = {
 			isa = PBXGroup;
 			children = (
+				F1E39C882AE5026500CEF0DA /* Models */,
 				F15DC9A72AE3F29700718846 /* SoundCloudApiConstant.swift */,
 				F15DC9A92AE3F45600718846 /* SoundCloudApi.swift */,
-				F15DC9AB2AE3F4F700718846 /* SoundCloudTrack.swift */,
-				F15DC9AD2AE3F5A900718846 /* SoundCloudUser.swift */,
+				F1E39C8B2AE504FC00CEF0DA /* SoundCloudApiDecoder.swift */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -108,6 +114,17 @@
 				F1E39C862AE4058700CEF0DA /* NavigationBarModifier.swift */,
 			);
 			path = ViewModifiers;
+			sourceTree = "<group>";
+		};
+		F1E39C882AE5026500CEF0DA /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				F1E39C892AE5028D00CEF0DA /* SoundCloudGenreTracksResponse.swift */,
+				F1E39C8D2AE5065900CEF0DA /* SoundCloudTrackCollection.swift */,
+				F15DC9AB2AE3F4F700718846 /* SoundCloudTrack.swift */,
+				F15DC9AD2AE3F5A900718846 /* SoundCloudUser.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 		F1FF40242ABAD95600E0840D = {
@@ -270,7 +287,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F1E39C8A2AE5028D00CEF0DA /* SoundCloudGenreTracksResponse.swift in Sources */,
 				F1FF40482AC8142100E0840D /* AppTabBarView.swift in Sources */,
+				F1E39C8C2AE504FC00CEF0DA /* SoundCloudApiDecoder.swift in Sources */,
 				CEC77FCB2AD722AD00DB4731 /* TTPodSettingsView.swift in Sources */,
 				F15DC9A82AE3F29700718846 /* SoundCloudApiConstant.swift in Sources */,
 				F15DC9AC2AE3F4F700718846 /* SoundCloudTrack.swift in Sources */,
@@ -279,6 +298,7 @@
 				F15DC9AA2AE3F45600718846 /* SoundCloudApi.swift in Sources */,
 				F1FF40332ABAD95600E0840D /* ContentView.swift in Sources */,
 				F1FF40462AC813FD00E0840D /* TabBarItemsPreferenceKey.swift in Sources */,
+				F1E39C8E2AE5065900CEF0DA /* SoundCloudTrackCollection.swift in Sources */,
 				F1FF40312ABAD95600E0840D /* TTPodMusicAppApp.swift in Sources */,
 				F1E39C872AE4058700CEF0DA /* NavigationBarModifier.swift in Sources */,
 				F15DC9AE2AE3F5A900718846 /* SoundCloudUser.swift in Sources */,

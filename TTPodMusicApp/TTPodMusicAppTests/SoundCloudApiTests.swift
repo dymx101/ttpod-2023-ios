@@ -13,7 +13,7 @@ final class SoundCloudApiTests: XCTestCase {
   let sut = SoundCloudApi()
   
   func testFetchTracks() async throws {
-    let tracks = try await sut.fetchTracksByGenre("Rock", offset: 0, limit: 50)
+    let tracks = try await sut.fetchTracksByGenreV2("Rock", offset: 0, limit: 50)
     XCTAssertFalse(tracks.isEmpty)
   }
 }

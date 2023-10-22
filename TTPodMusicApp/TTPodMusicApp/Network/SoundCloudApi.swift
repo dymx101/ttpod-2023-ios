@@ -12,9 +12,9 @@ final class SoundCloudApi {
   let session = URLSession(configuration: .default)
 
   private var cancellables = Set<AnyCancellable>()
-
-  func fetchTracksByGenre(_ genre: String, offset: Int, limit: Int) async throws -> [SoundCloudTrack] {
-    let urlString = SoundCloudApiConstant.tracksByGenreUrl(genre: genre, offset: offset, limit: limit)
+  
+  func fetchTracksByGenreV2(_ genre: String, offset: Int, limit: Int) async throws -> [SoundCloudTrack] {
+    let urlString = SoundCloudApiConstant.tracksByGenreUrlV2(genre: genre, offset: offset, limit: limit)
     guard let url = URL(string: urlString) else { return [] }
     
     return try await withCheckedThrowingContinuation({ cont in
@@ -26,10 +26,12 @@ final class SoundCloudApi {
           }
           return element.data
         }
-        .decode(type: [SoundCloudTrack].self, decoder: JSONDecoder())
-        .replaceError(with: [])
+        .decode(type: SoundCloudChartsTrackResponse.self, decoder: SoundCloudApiDecoder())
+        .map { response in response.collection.map { $0.track } }
         .eraseToAnyPublisher()
-        .sink(
+        .sink(receiveCompletion: { error in
+          print(error)
+        },
           receiveValue: { tracks in
             cont.resume(returning: tracks)
           }
