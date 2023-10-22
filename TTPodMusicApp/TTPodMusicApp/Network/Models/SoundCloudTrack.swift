@@ -14,17 +14,9 @@ struct SoundCloudTrack: Decodable {
   private let artworkUrl: String?
   let user: SoundCloudUser?
   let path: String?
-  let permalinkUrl: String?
-  
-  private enum CodingKeys: String, CodingKey {
-    case id
-    case duration
-    case title
-    case artworkUrl = "artwork_url"
-    case user
-    case path
-    case permalinkUrl = "permalink_url"
-  }
+  let description: String?
+  let genre: String?
+  let labelName: String?
   
   func getArtworkUrl() -> String? {
     return artworkUrl?.replacingOccurrences(of: "large", with: "crop")

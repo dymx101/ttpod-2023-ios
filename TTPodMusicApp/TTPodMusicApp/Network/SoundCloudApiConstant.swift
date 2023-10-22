@@ -14,6 +14,7 @@ enum SoundCloudApiConstant {
   static let FILTER_GENRE = "&genres=%1$s"
   static let URL_API_V2 = "https://api-v2.soundcloud.com/"
   static let FORMAT_URL_SONG = "http://api.soundcloud.com/tracks/%1$s/stream?client_id=%2$s"
+  
   static let URL_SEARCH_V2  = URL_API_V2 + "search/tracks"
   static let METHOD_CHARTS = "charts?"
   static let PARAMS_GENRES  = "&genre=soundcloud:genres:%1$s"
@@ -31,5 +32,9 @@ enum SoundCloudApiConstant {
   
   static func tracksByGenreUrl(genre: String, offset: Int, limit: Int) -> String {
     "\(URL_API)tracks.json?client_id=\(SOUND_CLOUD_CLIENT_ID)&genres=\(genre)&offset=\(offset)&limit=\(limit)"
+  }
+  
+  static func tracksByGenreUrlV2(genre: String, kind: String = "top", offset: Int, limit: Int) -> String {
+    "\(URL_API_V2)\(METHOD_CHARTS)&kind=\(kind)&client_id=\(SOUND_CLOUD_CLIENT_ID)&genre=soundcloud:genres:\(genre)&offset=\(offset)&limit=\(limit)&linked_partitioning=1"
   }
 }
