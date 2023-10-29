@@ -17,6 +17,7 @@
 		F1E39C8A2AE5028D00CEF0DA /* SoundCloudGenreTracksResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1E39C892AE5028D00CEF0DA /* SoundCloudGenreTracksResponse.swift */; };
 		F1E39C8C2AE504FC00CEF0DA /* SoundCloudApiDecoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1E39C8B2AE504FC00CEF0DA /* SoundCloudApiDecoder.swift */; };
 		F1E39C8E2AE5065900CEF0DA /* SoundCloudTrackCollection.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1E39C8D2AE5065900CEF0DA /* SoundCloudTrackCollection.swift */; };
+		F1E39C912AEE225D00CEF0DA /* SwiftSoup in Frameworks */ = {isa = PBXBuildFile; productRef = F1E39C902AEE225D00CEF0DA /* SwiftSoup */; };
 		F1FF40312ABAD95600E0840D /* TTPodMusicAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1FF40302ABAD95600E0840D /* TTPodMusicAppApp.swift */; };
 		F1FF40332ABAD95600E0840D /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1FF40322ABAD95600E0840D /* ContentView.swift */; };
 		F1FF40352ABAD95900E0840D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F1FF40342ABAD95900E0840D /* Assets.xcassets */; };
@@ -74,6 +75,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F1E39C912AEE225D00CEF0DA /* SwiftSoup in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -213,6 +215,9 @@
 			dependencies = (
 			);
 			name = TTPodMusicApp;
+			packageProductDependencies = (
+				F1E39C902AEE225D00CEF0DA /* SwiftSoup */,
+			);
 			productName = TTPodMusicApp;
 			productReference = F1FF402D2ABAD95600E0840D /* TTPodMusicApp.app */;
 			productType = "com.apple.product-type.application";
@@ -245,6 +250,9 @@
 				Base,
 			);
 			mainGroup = F1FF40242ABAD95600E0840D;
+			packageReferences = (
+				F1E39C8F2AEE225D00CEF0DA /* XCRemoteSwiftPackageReference "SwiftSoup" */,
+			);
 			productRefGroup = F1FF402E2ABAD95600E0840D /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -562,6 +570,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		F1E39C8F2AEE225D00CEF0DA /* XCRemoteSwiftPackageReference "SwiftSoup" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/scinfu/SwiftSoup";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		F1E39C902AEE225D00CEF0DA /* SwiftSoup */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = F1E39C8F2AEE225D00CEF0DA /* XCRemoteSwiftPackageReference "SwiftSoup" */;
+			productName = SwiftSoup;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = F1FF40252ABAD95600E0840D /* Project object */;
 }

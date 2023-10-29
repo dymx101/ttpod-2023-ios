@@ -26,6 +26,8 @@ enum SoundCloudApiConstant {
   static let KIND_TRENDING = "trending"
   static let ALL_MUSIC_GENRE = "all-music"
   
+  static let SAMPLE_TRACK_ID: Int64 = 1573199764
+  
   // 这两个client id都可以用
   // public static let SOUND_CLOUD_CLIENT_ID = "iZIs9mchVcX5lhVRyQGGAYlNPVldzAoX"
   static let SOUND_CLOUD_CLIENT_ID = "a3e059563d7fd3372b49b37f00a00bcf"

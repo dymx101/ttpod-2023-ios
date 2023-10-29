@@ -16,4 +16,9 @@ final class SoundCloudApiTests: XCTestCase {
     let tracks = try await sut.fetchTracksByGenreV2("Rock", offset: 0, limit: 50)
     XCTAssertFalse(tracks.isEmpty)
   }
+  
+  func testFetchPlaybackUrl() async throws {
+    let url = try await sut.fetchPlaybackUrl(by: SoundCloudApiConstant.SAMPLE_TRACK_ID)
+    XCTAssertNotNil(url)
+  }
 }
