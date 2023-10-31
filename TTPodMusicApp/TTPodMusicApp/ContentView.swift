@@ -9,6 +9,10 @@ import SwiftUI
 
 // https://img.sj33.cn/uploads/allimg/200909/10_2001.jpg
 struct ContentView: View {
+    @State var selectedMusic : MusicModel? = nil
+    @State private var isExpanded = false
+    @StateObject var viewModel = MusicViewModel()
+    
   let gridItems: [GridItem] = Array(repeating: GridItem(.flexible(minimum: 80)), count: 2)
   
     var body: some View {
@@ -35,6 +39,14 @@ struct ContentView: View {
                     }
                     .padding(.horizontal, 8)
                   }
+                  .onTapGesture {
+                      print("tap one music")
+                      if selectedMusic == nil {
+                          selectedMusic = viewModel.musics[0]
+                      } else {
+                          isExpanded.toggle()
+                      }
+                  }
                 }
                 .frame(width: (proxy.size.width - 8) / 2)
                 .background(.white.opacity(0.1))
@@ -44,7 +56,14 @@ struct ContentView: View {
             }
           }
         }
-        
+          VStack {
+              Spacer()
+              TTPodPlayMusicView(selectedMusic: $selectedMusic, isExpanded: $isExpanded)
+                  .padding(.bottom,7)
+                  .environmentObject(viewModel)
+                  .opacity(selectedMusic == nil ? 0 : 1)
+          }
+          .ignoresSafeArea()
       }
       .ignoresSafeArea()
     }

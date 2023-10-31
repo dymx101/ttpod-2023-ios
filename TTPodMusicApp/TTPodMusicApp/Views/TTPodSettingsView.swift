@@ -53,11 +53,13 @@ struct TTPodSettingsView: View {
                 .listStyle(GroupedListStyle())
                 .navigationBarTitleDisplayMode(.inline)
                 .navigationTitle("Settings")
-                .toolbarBackground(
-                    Color.yellow,
-                    for: .navigationBar)
-                .toolbarBackground(.visible, for: .navigationBar)
+//                .toolbarBackground(
+//                    Color.yellow,
+//                    for: .navigationBar)
+//                .toolbarBackground(.visible, for: .navigationBar)
+                .navigationBarColor(backgroundColor: .orange, titleColor: .white)
             }
         }
     }
 }
+
