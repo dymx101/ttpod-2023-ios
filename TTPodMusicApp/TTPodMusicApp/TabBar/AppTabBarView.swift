@@ -18,7 +18,7 @@ struct AppTabBarView: View {
       TTPodSettingsView()
         .tabBarItem(tab: .home, selection: $tabSelection)
       
-        MusicListView()
+      MusicListView(viewModel: .init(api: SoundCloudApi()))
         .tabBarItem(tab: .favorites, selection: $tabSelection)
       
       Color.green

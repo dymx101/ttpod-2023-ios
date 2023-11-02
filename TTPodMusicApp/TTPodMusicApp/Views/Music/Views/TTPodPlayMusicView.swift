@@ -264,7 +264,8 @@ extension TTPodPlayMusicView {
     }
 }
 
-#Preview {
-    TTPodPlayMusicView(selectedMusic: .constant(nil), isExpanded: .constant(true))
-        .environmentObject(MusicViewModel())
-}
+// FIXME: not working for me?
+//#Preview {
+//    TTPodPlayMusicView(selectedMusic: .constant(nil), isExpanded: .constant(true))
+//        .environmentObject(MusicViewModel())
+//}

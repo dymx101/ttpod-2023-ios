@@ -56,12 +56,13 @@ struct SwiftUISlider: UIViewRepresentable {
 
 #if DEBUG
 
-#Preview  {
-    SwiftUISlider(
-        thumbColor: .constant(.white),
-        minTrackColor: .blue,
-        maxTrackColor: .green,
-        value: .constant(0.5), maxValue: .constant(129.07)
-    )
-}
+// FIXME: Not working for me?
+//#Preview  {
+//    SwiftUISlider(
+//        thumbColor: .constant(.white),
+//        minTrackColor: .blue,
+//        maxTrackColor: .green,
+//        value: .constant(0.5), maxValue: .constant(129.07)
+//    )
+//}
 #endif
