@@ -18,7 +18,7 @@ struct AppTabBarView: View {
       TTPodSettingsView()
         .tabBarItem(tab: .home, selection: $tabSelection)
       
-        ContentView()
+        MusicListView()
         .tabBarItem(tab: .favorites, selection: $tabSelection)
       
       Color.green

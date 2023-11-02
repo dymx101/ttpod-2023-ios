@@ -8,7 +8,7 @@
 import SwiftUI
 
 // https://img.sj33.cn/uploads/allimg/200909/10_2001.jpg
-struct ContentView: View {
+struct MusicListView: View {
     @State var selectedMusic : MusicModel? = nil
     @State private var isExpanded = false
     @StateObject var viewModel = MusicViewModel()
@@ -71,6 +71,6 @@ struct ContentView: View {
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView()
+        MusicListView()
     }
 }
