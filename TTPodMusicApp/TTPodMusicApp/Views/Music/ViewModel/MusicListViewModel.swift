@@ -14,8 +14,7 @@ class MusicListViewModel: ObservableObject {
   private let api: SoundCloudApi
   private var apiOffset = 0
   private let apiLimit = 20
-  // TODO: make this genre configurable
-  private var apiGenre = "Rock"
+  private var apiGenre: String { GenreData.getRandomGenre()?.name ?? "rock"}
 
   private(set) var hasMoreData = true
   var shouldShowLoadMore: Bool { !tracks.isEmpty && hasMoreData }
