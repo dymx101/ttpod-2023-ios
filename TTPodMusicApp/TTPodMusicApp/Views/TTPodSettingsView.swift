@@ -12,7 +12,7 @@ struct TTPodSettingsView: View {
     var body: some View {
         NavigationStack {
             ZStack {
-                Color.green
+                Color.black
                 List {
                     Group {
                         Section(header: Text("General")) {
@@ -57,7 +57,7 @@ struct TTPodSettingsView: View {
 //                    Color.yellow,
 //                    for: .navigationBar)
 //                .toolbarBackground(.visible, for: .navigationBar)
-                .navigationBarColor(backgroundColor: .orange, titleColor: .white)
+                .navigationBarColor(backgroundColor: .white.opacity(0.1), titleColor: .white)
             }
         }
     }

@@ -12,6 +12,13 @@ class MusicListViewModel: ObservableObject {
 
   // MARK: - Properties
   private let api: SoundCloudApi
+  private var apiOffset = 0
+  private let apiLimit = 20
+  // TODO: make this genre configurable
+  private var apiGenre = "Rock"
+
+  private(set) var hasMoreData = true
+  var shouldShowLoadMore: Bool { !tracks.isEmpty && hasMoreData }
   
   init(api: SoundCloudApi) {
     self.api = api
@@ -20,9 +27,19 @@ class MusicListViewModel: ObservableObject {
   // Local Data for test
   @MainActor
   func fetchLocalMusics() async {
-    // TODO: make this genre configurable
     // TODO: Error handling
-    // TODO: load more
-    tracks = (try? await api.fetchTracksByGenreV2("Rock", offset: 0, limit: 50)) ?? []
+    apiOffset = 0
+    hasMoreData = true
+    tracks = (try? await api.fetchTracksByGenreV2(apiGenre, offset: apiOffset, limit: apiLimit)) ?? []
+    hasMoreData = !tracks.isEmpty
+  }
+  
+  @MainActor
+  func fetchMore() async {
+    guard hasMoreData else { return }
+    apiOffset += apiLimit
+    let newTracks = (try? await api.fetchTracksByGenreV2(apiGenre, offset: apiOffset, limit: apiLimit)) ?? []
+    tracks.append(contentsOf: newTracks)
+    hasMoreData = !newTracks.isEmpty
   }
 }

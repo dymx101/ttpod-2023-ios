@@ -45,7 +45,7 @@ struct MusicListView: View {
                         .frame(width: (proxy.size.width - 8 * 3) / 2)
                         .background(.black)
                     } else {
-                      Image(systemName: "heart.fill")
+                      Image("default_album")
                         .resizable()
                         .scaledToFill()
                         .background(.black)
@@ -59,6 +59,7 @@ struct MusicListView: View {
                         .font(.subheadline)
                         .lineLimit(2)
                         .multilineTextAlignment(.leading)
+                        .padding(.bottom, 8)
                     }
                     .padding(.horizontal, 8)
                   }
@@ -74,8 +75,23 @@ struct MusicListView: View {
                 .background(.white.opacity(0.1))
                 .foregroundColor(.white)
                 .cornerRadius(4)
+                .padding(.bottom, 8)
               }
             }
+            
+            if viewModel.shouldShowLoadMore {
+              Text("Loading more data...")
+                .font(Font.system(size: 12))
+                .padding(.vertical, 8)
+                .onBecomingVisible {
+                  Task {
+                    await viewModel.fetchMore()
+                  }
+                }
+            }
+            
+            Color.clear
+              .frame(height: safeAreaInsets.bottom + 55)
           }
         }
         .padding(.horizontal, 8)
