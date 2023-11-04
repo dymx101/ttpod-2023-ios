@@ -17,9 +17,20 @@ struct SoundCloudTrack: Decodable {
   let description: String?
   let genre: String?
   let labelName: String?
+  let publisherMetadata: PublisherMetadata?
   
   func getArtworkUrl() -> URL? {
     guard let string =  artworkUrl?.replacingOccurrences(of: "large", with: "crop") else { return nil }
     return URL(string: string)
+  }
+  
+  func getArtistName() -> String? {
+    publisherMetadata?.artist ?? user?.username
+  }
+  
+  struct PublisherMetadata: Decodable {
+    let artist: String?
+    let albumTitle: String?
+    let releaseTitle: String?
   }
 }

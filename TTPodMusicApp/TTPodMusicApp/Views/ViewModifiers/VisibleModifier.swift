@@ -16,6 +16,7 @@ public extension View {
 private struct BecomingVisible: ViewModifier {
   
   @State var action: (() -> Void)?
+  @State var wasVisible = false
   
   func body(content: Content) -> some View {
     content.overlay {
@@ -27,8 +28,12 @@ private struct BecomingVisible: ViewModifier {
             value: UIScreen.main.bounds.intersects(proxy.frame(in: .global))
           )
           .onPreferenceChange(VisibleKey.self) { isVisible in
-            guard isVisible, let action else { return }
+            guard isVisible, !wasVisible, let action else {
+              wasVisible = isVisible
+              return
+            }
             action()
+            wasVisible = isVisible
           }
       }
     }

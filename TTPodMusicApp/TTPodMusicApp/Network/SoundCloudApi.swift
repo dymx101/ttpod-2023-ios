@@ -30,8 +30,14 @@ final class SoundCloudApi {
         .decode(type: SoundCloudChartsTrackResponse.self, decoder: SoundCloudApiDecoder())
         .map { response in response.collection.map { $0.track } }
         .eraseToAnyPublisher()
-        .sink(receiveCompletion: { error in
-          print(error)
+        .sink(receiveCompletion: { completion in
+          switch completion {
+          case .finished:
+            break
+          case .failure(let error):
+            print(error)
+            cont.resume(throwing: error)
+          }
         },
           receiveValue: { tracks in
             cont.resume(returning: tracks)

@@ -26,6 +26,15 @@
         "revision" : "8b6cf29eead8841a1fa7822481cb3af4ddaadba6",
         "version" : "2.6.1"
       }
+    },
+    {
+      "identity" : "swiftui-pull-to-refresh",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/globulus/swiftui-pull-to-refresh",
+      "state" : {
+        "revision" : "1852a4eb7e7a12a768c64b25b1bd905993ced4eb",
+        "version" : "1.1.9"
+      }
     }
   ],
   "version" : 2

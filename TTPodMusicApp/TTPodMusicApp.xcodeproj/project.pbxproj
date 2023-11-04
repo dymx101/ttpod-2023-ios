@@ -34,6 +34,7 @@
 		F1E39C9C2AF5CB3100CEF0DA /* VisibleModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1E39C9B2AF5CB3100CEF0DA /* VisibleModifier.swift */; };
 		F1E39C9E2AF6269D00CEF0DA /* AppConstant.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1E39C9D2AF6269D00CEF0DA /* AppConstant.swift */; };
 		F1E39CA02AF6271400CEF0DA /* GenreData.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1E39C9F2AF6271400CEF0DA /* GenreData.swift */; };
+		F1E39CA32AF62D3600CEF0DA /* SwiftUIPullToRefresh in Frameworks */ = {isa = PBXBuildFile; productRef = F1E39CA22AF62D3600CEF0DA /* SwiftUIPullToRefresh */; };
 		F1FF40312ABAD95600E0840D /* TTPodMusicAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1FF40302ABAD95600E0840D /* TTPodMusicAppApp.swift */; };
 		F1FF40332ABAD95600E0840D /* MusicListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1FF40322ABAD95600E0840D /* MusicListView.swift */; };
 		F1FF40352ABAD95900E0840D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F1FF40342ABAD95900E0840D /* Assets.xcassets */; };
@@ -108,6 +109,7 @@
 			files = (
 				F1E39C962AF36B8700CEF0DA /* SDWebImageSwiftUI in Frameworks */,
 				F1E39C912AEE225D00CEF0DA /* SwiftSoup in Frameworks */,
+				F1E39CA32AF62D3600CEF0DA /* SwiftUIPullToRefresh in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -313,6 +315,7 @@
 			packageProductDependencies = (
 				F1E39C902AEE225D00CEF0DA /* SwiftSoup */,
 				F1E39C952AF36B8700CEF0DA /* SDWebImageSwiftUI */,
+				F1E39CA22AF62D3600CEF0DA /* SwiftUIPullToRefresh */,
 			);
 			productName = TTPodMusicApp;
 			productReference = F1FF402D2ABAD95600E0840D /* TTPodMusicApp.app */;
@@ -349,6 +352,7 @@
 			packageReferences = (
 				F1E39C8F2AEE225D00CEF0DA /* XCRemoteSwiftPackageReference "SwiftSoup" */,
 				F1E39C942AF36B8700CEF0DA /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */,
+				F1E39CA12AF62D3600CEF0DA /* XCRemoteSwiftPackageReference "swiftui-pull-to-refresh" */,
 			);
 			productRefGroup = F1FF402E2ABAD95600E0840D /* Products */;
 			projectDirPath = "";
@@ -712,6 +716,14 @@
 				minimumVersion = 2.0.0;
 			};
 		};
+		F1E39CA12AF62D3600CEF0DA /* XCRemoteSwiftPackageReference "swiftui-pull-to-refresh" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/globulus/swiftui-pull-to-refresh";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -724,6 +736,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = F1E39C942AF36B8700CEF0DA /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */;
 			productName = SDWebImageSwiftUI;
+		};
+		F1E39CA22AF62D3600CEF0DA /* SwiftUIPullToRefresh */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = F1E39CA12AF62D3600CEF0DA /* XCRemoteSwiftPackageReference "swiftui-pull-to-refresh" */;
+			productName = SwiftUIPullToRefresh;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
